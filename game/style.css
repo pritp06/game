@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #f8f9fa; /* Light background */
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.flipped {
+    background-color: #28a745;
+}
+
+.card.hidden {
+    background-color: #007bff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 70px);
+        gap: 8px;
+    }
+
+    .card {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+}
+
+/* For screens between 600px and 1024px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 80px);
+        gap: 10px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 22px;
+    }
+}
+
+/* For screens larger than 1024px */
+@media screen and (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(4, 100px);
+        gap: 10px;
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+    }
+}
